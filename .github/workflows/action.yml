@@ -1,0 +1,17 @@
+name: General ation
+
+on: [push]
+
+jobs:
+    github-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Simple js action
+              id: greet
+              uses: actions/hello-world-javascript-action@v1
+            #   with keyword helps to transfer values to action
+              with:
+                who-to-greet: 'Rajat'
+            - name: Output 
+              run: echo "${{steps.greet.outputs}}"
+              
