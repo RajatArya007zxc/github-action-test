@@ -6,6 +6,20 @@ jobs:
     github-action:
         runs-on: ubuntu-latest
         steps:
+            - name: Getting File 
+              run: |
+                   pwd
+                   ls -a
+
+            - name: Github Clone action
+              uses: actions/checkout@v1
+
+            - name: Getting files after checkout
+              run: |
+                   pwd
+                   ls -a
+
+
             - name: Simple js action
               id: greet
               uses: actions/hello-world-javascript-action@v1
